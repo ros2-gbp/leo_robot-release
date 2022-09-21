@@ -1,0 +1,30 @@
+ros-humble-leo-fw (1.2.0-1jammy) jammy; urgency=high
+
+  * Fix test_hw script
+  * Update leocore firmware to version 1.0.1
+  * Contributors: Błażej Sowa
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 21 Sep 2022 00:00:00 -0000
+
+ros-humble-leo-fw (1.1.0-1jammy) jammy; urgency=high
+
+  * Add IMU gyro calibration (#3 <https://github.com/LeoRover/leo_robot-ros2/issues/3>)
+  * Contributors: Aleksander Szymański
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 31 Aug 2022 00:00:00 -0000
+
+ros-humble-leo-fw (1.0.1-1jammy) jammy; urgency=high
+
+  * Add firmware binaries
+  * Contributors: Błażej Sowa
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 10 Aug 2022 00:00:00 -0000
+
+ros-humble-leo-fw (1.0.0-1jammy) jammy; urgency=high
+
+  * Initial ROS2 port
+  * Contributors: Błażej Sowa
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 10 Aug 2022 00:00:00 -0000
+
+
