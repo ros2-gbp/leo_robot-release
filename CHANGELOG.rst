@@ -2,6 +2,11 @@
 Changelog for package leo_fw
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.2.1 (2022-11-30)
+------------------
+* Fix resolving firmware topic names in firmware_message_converter
+* Contributors: Błażej Sowa
+
 1.2.0 (2022-09-21)
 ------------------
 * Fix test_hw script
