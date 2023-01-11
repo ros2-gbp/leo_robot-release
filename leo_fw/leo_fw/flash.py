@@ -22,12 +22,20 @@ import os
 import subprocess
 
 from typing import Optional
+from argparse import Namespace
 
-import rclpy
-from rclpy.node import HIDDEN_NODE_PREFIX
 from ament_index_python.packages import get_package_share_directory
+from ros2cli.node.direct import DirectNode
 
-from .utils import is_tool, write_flush, query_yes_no, prompt_options
+from .utils import (
+    is_tool,
+    write_flush,
+    query_yes_no,
+    prompt_options,
+    print_ok,
+    print_warn,
+    print_fail,
+)
 from .board import BoardType, determine_board, check_firmware_version
 from .agent import agent_check_active, agent_start, agent_stop
 
@@ -56,10 +64,10 @@ def flash_firmware(
     write_flush("--> Checking if stm32loader is installed.. ")
 
     if is_tool("stm32loader"):
-        print("YES")
+        print_ok("YES")
     else:
-        print("NO")
-        print(
+        print_fail("NO")
+        print_warn(
             "ERROR: Cannot find the stm32loader tool. "
             "Make sure the python3-stm32loader package is installed."
         )
@@ -67,79 +75,65 @@ def flash_firmware(
 
     #####################################################
 
-    write_flush("--> Initializing ROS node.. ")
-    rclpy.init()
-    node = rclpy.create_node(
-        HIDDEN_NODE_PREFIX + "firmware_flasher", start_parameter_services=False
-    )
-    print("DONE")
-
-    #####################################################
-
     write_flush("--> Checking if Micro-ROS Agent is running.. ")
 
     uros_agent_running = agent_check_active()
     if uros_agent_running:
-        print("YES")
+        print_ok("YES")
     else:
-        print("NO")
+        print_fail("NO")
 
     #####################################################
 
-    if uros_agent_running:
+    if uros_agent_running and (board_type is None or check_version):
+        write_flush("--> Initializing ROS node.. ")
+        node = DirectNode(Namespace(node_name_suffix="firmware_flasher", spin_time=3.0))
+        print_ok("DONE")
+
+    #####################################################
+
+    if uros_agent_running and (board_type is None or check_version):
         write_flush("--> Checking if firmware node is active.. ")
 
-        # Wait for node discovery
-        timeout_reached = False
-
-        def timer_callback():
-            nonlocal timeout_reached
-            timeout_reached = True
-
-        timer = node.create_timer(1.0, timer_callback)
-        while not timeout_reached:
-            rclpy.spin_once(node)
-        node.destroy_timer(timer)
-
         if ("firmware", node.get_namespace()) in node.get_node_names_and_namespaces():
-            print("YES")
+            print_ok("YES")
             firmware_node_active = True
         else:
-            print("NO")
+            print_fail("NO")
             firmware_node_active = False
             if check_version:
-                print(
+                print_warn(
                     "Firmware node is not active. "
-                    "Will not be able to check the current firmware version."
+                    "Will not be able to check the board type or current firmware version."
                 )
                 if not query_yes_no("Are you sure you want to continue?", default="no"):
                     return
 
     #####################################################
 
-    if uros_agent_running and firmware_node_active and board_type is None:
+    if uros_agent_running and board_type is None and firmware_node_active:
         write_flush("--> Trying to determine board type.. ")
 
         board_type = determine_board(node)
 
         if board_type is not None:
-            print("SUCCESS")
+            print_ok("SUCCESS")
         else:
-            print("FAIL")
+            print_fail("FAIL")
 
     #####################################################
 
     current_firmware_version = "<unknown>"
 
-    if uros_agent_running and firmware_node_active and check_version:
+    if uros_agent_running and check_version and firmware_node_active:
         write_flush("--> Trying to check the current firmware version.. ")
 
         current_firmware_version = check_firmware_version(node)
 
         if current_firmware_version != "<unknown>":
-            print("SUCCESS")
+            print_ok("SUCCESS")
         else:
-            print("FAIL")
+            print_fail("FAIL")
 
     #####################################################
 
@@ -159,9 +153,9 @@ def flash_firmware(
         firmware_version = "<unknown>"
     else:
         if board_type == BoardType.CORE2:
-            firmware_version = "1.0.0"
+            firmware_version = "1.1.0"
         elif board_type == BoardType.LEOCORE:
-            firmware_version = "1.0.1"
+            firmware_version = "1.1.0"
 
     print(f"Current firmware version: {current_firmware_version}")
     print(f"Version of the firmware to flash: {firmware_version}")
@@ -174,7 +168,7 @@ def flash_firmware(
     if uros_agent_running:
         write_flush("--> Stopping the Micro-ROS Agent.. ")
         agent_stop()
-        print("DONE")
+        print_ok("DONE")
 
     #####################################################
 
@@ -201,4 +195,4 @@ def flash_firmware(
     if uros_agent_running:
         write_flush("--> Starting the Micro-ROS Agent.. ")
         agent_start()
-        print("DONE")
+        print_ok("DONE")
