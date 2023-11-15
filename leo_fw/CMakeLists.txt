@@ -46,6 +46,7 @@ install(
     scripts/update
     scripts/test_hw
     scripts/calibrate_imu
+    scripts/firmware_parameter_bridge
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -53,5 +54,10 @@ install(
   DIRECTORY data
   DESTINATION share/${PROJECT_NAME}
 )
+
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
+endif()
 
 ament_package()
