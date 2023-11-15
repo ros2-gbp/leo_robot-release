@@ -1,4 +1,4 @@
-# Copyright 2022 Kell Ideas sp. z o.o.
+# Copyright 2022-2023 Fictionlab sp. z o.o.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -153,9 +153,9 @@ def flash_firmware(
         firmware_version = "<unknown>"
     else:
         if board_type == BoardType.CORE2:
-            firmware_version = "1.1.0"
+            firmware_version = "1.2.0"
         elif board_type == BoardType.LEOCORE:
-            firmware_version = "1.1.0"
+            firmware_version = "1.2.0"
 
     print(f"Current firmware version: {current_firmware_version}")
     print(f"Version of the firmware to flash: {firmware_version}")
