@@ -1,3 +1,29 @@
+## leo_robot (humble) - 1.4.0-1
+
+The packages in the `leo_robot` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble leo_robot` on `Wed, 15 Nov 2023 16:21:17 -0000`
+
+These packages were released:
+- `leo_bringup`
+- `leo_fw`
+- `leo_robot`
+
+Version of package(s) in repository `leo_robot`:
+
+- upstream repository: https://github.com/LeoRover/leo_robot-ros2.git
+- release repository: https://github.com/ros2-gbp/leo_robot-release.git
+- rosdistro version: `1.3.0-1`
+- old version: `1.3.0-1`
+- new version: `1.4.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## leo_robot (humble) - 1.3.0-1
 
 The packages in the `leo_robot` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble leo_robot` on `Wed, 11 Jan 2023 14:27:55 -0000`
