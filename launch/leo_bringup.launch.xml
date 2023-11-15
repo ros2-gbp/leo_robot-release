@@ -1,13 +1,29 @@
 <launch version="0.1.1">
 
-  <arg
-    name="model"
+  <arg name="spawn_state_publisher"
+    default="true"
+    description="Whether to start the robot_state_publisher node" />
+
+  <arg name="model"
     default="$(find-pkg-share leo_description)/urdf/leo.urdf.xacro"
     description="Absolute path to robot urdf.xacro file" />
-  <arg name="tf_frame_prefix" default="" />
 
-  <include file="$(find-pkg-share leo_description)/launch/state_publisher.launch.xml">
+  <arg name="mecanum_wheels"
+    default="false"
+    description="Flag specifying wheel types of the robot" />
+
+  <arg name="tf_frame_prefix"
+    default=""
+    description="The prefix added to each published TF frame id" />
+
+  <arg name="firmware_override_params_file"
+    default=""
+    description="Absolute path to the yaml file with firmware parameters to be overrided" />
+
+  <include if="$(var spawn_state_publisher)"
+    file="$(find-pkg-share leo_description)/launch/state_publisher.launch.xml">
     <arg name="model" value="$(var model)" />
+    <arg name="mecanum_wheels" value="$(var mecanum_wheels)" />
   </include>
 
   <node pkg="web_video_server"
@@ -30,6 +46,16 @@
     <param from="$(find-pkg-share leo_bringup)/config/firmware_message_converter.yaml" />
   </node>
 
+  <let if="$(var mecanum_wheels)" name="firmware_default_params_file"
+    value="$(find-pkg-share leo_bringup)/config/firmware_mecanum_params.yaml" />
+  <let unless="$(var mecanum_wheels)" name="firmware_default_params_file"
+    value="$(find-pkg-share leo_bringup)/config/firmware_diff_drive_params.yaml" />
+
+  <node pkg="leo_fw" exec="firmware_parameter_bridge">
+    <param name="default_params_file_path" value="$(var firmware_default_params_file)" />
+    <param name="override_params_file_path" value="$(var firmware_override_params_file)" />
+  </node>
+
   <node_container namespace=""
     name="image_container"
     pkg="rclcpp_components"
@@ -39,6 +65,7 @@
       pkg="v4l2_camera"
       plugin="v4l2_camera::V4L2Camera">
       <param from="$(find-pkg-share leo_bringup)/config/v4l2_camera.yaml" />
+      <param name="camera_frame_id" value="$(var tf_frame_prefix)camera_optical_frame" />
       <extra_arg name="use_intra_process_comms" value="true" />
     </composable_node>
     <composable_node namespace="camera"
