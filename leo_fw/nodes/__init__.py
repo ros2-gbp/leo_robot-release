@@ -1,4 +1,4 @@
-# Copyright 2022 Fictionlab sp. z o.o.
+# Copyright 2023 Fictionlab sp. z o.o.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -18,7 +18,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-from .flash import flash_firmware
-from .test_hw import test_hw
+from .parameter_bridge import ParameterBridge
+from .imu_calibrator import ImuCalibrator
 
-__all__ = ["flash_firmware", "test_hw"]
+__all__ = ["ParameterBridge", "ImuCalibrator"]
