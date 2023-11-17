@@ -1,0 +1,12 @@
+Source: ros-iron-leo-robot
+Section: misc
+Priority: optional
+Maintainer: Fictionlab <support@fictionlab.pl>
+Build-Depends: debhelper (>= 9.0.0), ros-iron-ament-cmake, ros-iron-ros-workspace
+Homepage: http://wiki.ros.org/leo_robot
+Standards-Version: 3.9.2
+
+Package: ros-iron-leo-robot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-iron-leo, ros-iron-leo-bringup, ros-iron-leo-fw, ros-iron-ros-workspace
+Description: Metapackage of software to install on Leo Rover.
