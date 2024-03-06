@@ -1,0 +1,56 @@
+ros-rolling-leo-bringup (1.4.0-2noble) noble; urgency=high
+
+  * Add firmware parameter bridge (#4 <https://github.com/LeoRover/leo_robot-ros2/issues/4>)
+  * Update mecanum_wheels description
+  * Use tf_frame_prefix for camera frame
+  * Add spawn_state_publisher argument
+  * Sort dependencies in package.xml
+  * Add mecanum_wheels argument to leo_bringup launch file (#6 <https://github.com/LeoRover/leo_robot-ros2/issues/6>)
+  * Use ament cmake tests via colcon (#7 <https://github.com/LeoRover/leo_robot-ros2/issues/7>)
+  * Mecanum Wheel Odometry in firmware_message_converter (#5 <https://github.com/LeoRover/leo_robot-ros2/issues/5>)
+  * Contributors: Aleksander Szymański, Błażej Sowa
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 15 Nov 2023 00:00:00 -0000
+
+ros-rolling-leo-bringup (1.3.0-2noble) noble; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 11 Jan 2023 00:00:00 -0000
+
+ros-rolling-leo-bringup (1.2.1-2noble) noble; urgency=high
+
+  * Fix namespace retrieval in leo_system script
+  * Contributors: Błażej Sowa
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 30 Nov 2022 00:00:00 -0000
+
+ros-rolling-leo-bringup (1.2.0-2noble) noble; urgency=high
+
+  * Add image_proc to dependencies
+  * Run v4l2_camera node in container together with image_proc nodes
+  * Add camera calibration file
+  * Contributors: Błażej Sowa
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 21 Sep 2022 00:00:00 -0000
+
+ros-rolling-leo-bringup (1.1.0-2noble) noble; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 31 Aug 2022 00:00:00 -0000
+
+ros-rolling-leo-bringup (1.0.1-2noble) noble; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 10 Aug 2022 00:00:00 -0000
+
+ros-rolling-leo-bringup (1.0.0-2noble) noble; urgency=high
+
+  * Initial ROS2 port
+  * Contributors: Błażej Sowa, Aleksander Szymański
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 10 Aug 2022 00:00:00 -0000
+
+
