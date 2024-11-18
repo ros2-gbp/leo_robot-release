@@ -2,10 +2,10 @@
 Changelog for package leo_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.5.0 (2024-11-18)
+2.0.0 (2024-11-18)
 ------------------
-* Add web_video_server to dependencies (`#13 <https://github.com/LeoRover/leo_robot-ros2/issues/13>`_)
-* Contributors: Błażej Sowa
+* Add web_video_server to dependencies (`#13 <https://github.com/LeoRover/leo_robot-ros2/issues/13>`_) (`#15 <https://github.com/LeoRover/leo_robot-ros2/issues/15>`_)
+* Contributors: mergify[bot]
 
 1.4.0 (2023-11-15)
 ------------------
