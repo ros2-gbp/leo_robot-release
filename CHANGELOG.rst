@@ -2,6 +2,11 @@
 Changelog for package leo_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.1 (2025-04-30)
+------------------
+* Add leo_filters to dependencies
+* Contributors: Błażej Sowa
+
 2.1.0 (2025-04-30)
 ------------------
 
