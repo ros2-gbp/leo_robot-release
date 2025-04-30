@@ -2,6 +2,9 @@
 Changelog for package leo_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.1 (2025-04-30)
+------------------
+
 2.1.0 (2025-04-30)
 ------------------
 * Improve ov5647 compression quality
