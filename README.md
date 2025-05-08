@@ -1,3 +1,30 @@
+## leo_robot (jazzy) - 2.1.2-1
+
+The packages in the `leo_robot` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --rosdistro jazzy leo_robot` on `Thu, 08 May 2025 15:47:07 -0000`
+
+These packages were released:
+- `leo_bringup`
+- `leo_filters`
+- `leo_fw`
+- `leo_robot`
+
+Version of package(s) in repository `leo_robot`:
+
+- upstream repository: https://github.com/LeoRover/leo_robot-ros2.git
+- release repository: https://github.com/ros2-gbp/leo_robot-release.git
+- rosdistro version: `2.1.1-1`
+- old version: `2.1.1-1`
+- new version: `2.1.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## leo_robot (kilted) - 2.1.1-1
 
 The packages in the `leo_robot` repository were released into the `kilted` distro by running `/usr/bin/bloom-release --rosdistro kilted leo_robot` on `Sun, 04 May 2025 16:51:43 -0000`
