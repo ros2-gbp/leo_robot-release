@@ -2,6 +2,9 @@
 Changelog for package leo_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.2 (2025-05-08)
+------------------
+
 2.1.1 (2025-04-30)
 ------------------
 * Add leo_filters to dependencies
