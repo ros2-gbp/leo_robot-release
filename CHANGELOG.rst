@@ -2,6 +2,19 @@
 Changelog for package leo_fw
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.2.0 (2025-05-23)
+------------------
+
+2.1.3 (2025-05-08)
+------------------
+* Use target_link_libraries instead of ament_target_dependencies (`#24 <https://github.com/LeoRover/leo_robot-ros2/issues/24>`_)
+* Contributors: Błażej Sowa
+
+2.1.2 (2025-05-08)
+------------------
+* Update `robot_frame` param (`#22 <https://github.com/LeoRover/leo_robot-ros2/issues/22>`_)
+* Contributors: Aleksander Szymański
+
 2.1.1 (2025-04-30)
 ------------------
 
