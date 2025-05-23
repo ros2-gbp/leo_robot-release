@@ -1,0 +1,12 @@
+Source: ros-kilted-leo-filters
+Section: misc
+Priority: optional
+Maintainer: Fictionlab <support@fictionlab.pl>
+Build-Depends: debhelper (>= 9.0.0), libyaml-cpp-dev, ros-kilted-ament-cmake, ros-kilted-ament-cmake-copyright <!nocheck>, ros-kilted-ament-cmake-lint-cmake <!nocheck>, ros-kilted-ament-cmake-uncrustify <!nocheck>, ros-kilted-ament-cmake-xmllint <!nocheck>, ros-kilted-ament-lint-auto <!nocheck>, ros-kilted-generate-parameter-library, ros-kilted-geometry-msgs, ros-kilted-nav-msgs, ros-kilted-rclcpp, ros-kilted-rclcpp-components, ros-kilted-sensor-msgs, ros-kilted-std-srvs, ros-kilted-tf2, ros-kilted-tf2-ros, ros-kilted-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kilted-leo-filters
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libyaml-cpp-dev, ros-kilted-generate-parameter-library, ros-kilted-geometry-msgs, ros-kilted-nav-msgs, ros-kilted-rclcpp, ros-kilted-rclcpp-components, ros-kilted-sensor-msgs, ros-kilted-std-srvs, ros-kilted-tf2, ros-kilted-tf2-ros, ros-kilted-ros-workspace
+Description: Nodes for filtering and processing imu and wheel odom messages.
