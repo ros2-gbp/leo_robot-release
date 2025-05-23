@@ -2,6 +2,21 @@
 Changelog for package leo_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.2.0 (2025-05-23)
+------------------
+* Use services instead of topics for reboot and shutdown commands (`#28 <https://github.com/LeoRover/leo_robot-ros2/issues/28>`_)
+* Specify camera frame_id (`#27 <https://github.com/LeoRover/leo_robot-ros2/issues/27>`_)
+* Add publish_odom_tf argument to leo_bringup launch file (`#26 <https://github.com/LeoRover/leo_robot-ros2/issues/26>`_)
+* Contributors: Błażej Sowa
+
+2.1.3 (2025-05-08)
+------------------
+
+2.1.2 (2025-05-08)
+------------------
+* Update `robot_frame` param (`#22 <https://github.com/LeoRover/leo_robot-ros2/issues/22>`_)
+* Contributors: Aleksander Szymański
+
 2.1.1 (2025-04-30)
 ------------------
 
