@@ -1,0 +1,61 @@
+ros-humble-leo-filters (1.6.0-1jammy) jammy; urgency=high
+
+  * Backport changes from Jazzy branch to Humble (#37 <https://github.com/LeoRover/leo_robot-ros2/issues/37>)
+    * Add leo_filters package (#17 <https://github.com/LeoRover/leo_robot-ros2/issues/17>)
+    * Use target_link_libraries instead of ament_target_dependencies (#24 <https://github.com/LeoRover/leo_robot-ros2/issues/24>)
+    * Don't use deprecated tf2 headers (#25 <https://github.com/LeoRover/leo_robot-ros2/issues/25>)
+    * Add reset_calibration service to imu_filter (#31 <https://github.com/LeoRover/leo_robot-ros2/issues/31>)
+    * Complementary filter improvements (#34 <https://github.com/LeoRover/leo_robot-ros2/issues/34>)
+  * Contributors: Błażej Sowa, Aleksander Szymański, Jan Hernas
+
+ -- Fictionlab <support@fictionlab.pl>  Sat, 13 Sep 2025 00:00:00 -0000
+
+ros-humble-leo-filters (1.5.0-1jammy) jammy; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Mon, 18 Nov 2024 00:00:00 -0000
+
+ros-humble-leo-filters (1.4.0-1jammy) jammy; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 15 Nov 2023 00:00:00 -0000
+
+ros-humble-leo-filters (1.3.0-1jammy) jammy; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 11 Jan 2023 00:00:00 -0000
+
+ros-humble-leo-filters (1.2.1-1jammy) jammy; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 30 Nov 2022 00:00:00 -0000
+
+ros-humble-leo-filters (1.2.0-1jammy) jammy; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 21 Sep 2022 00:00:00 -0000
+
+ros-humble-leo-filters (1.1.0-1jammy) jammy; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 31 Aug 2022 00:00:00 -0000
+
+ros-humble-leo-filters (1.0.1-1jammy) jammy; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 10 Aug 2022 12:14:00 -0000
+
+ros-humble-leo-filters (1.0.0-1jammy) jammy; urgency=high
+
+
+
+ -- Fictionlab <support@fictionlab.pl>  Wed, 10 Aug 2022 10:55:00 -0000
+
+
