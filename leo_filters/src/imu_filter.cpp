@@ -41,8 +41,8 @@ inline tf2::Quaternion hamiltonToTFQuaternion(
   double q0, double q1,
   double q2, double q3)
 {
-    // ROS uses the Hamilton quaternion convention (q0 is the scalar). However,
-    // the ROS quaternion is in the form [x, y, z, w], with w as the scalar.
+  // ROS uses the Hamilton quaternion convention (q0 is the scalar). However,
+  // the ROS quaternion is in the form [x, y, z, w], with w as the scalar.
   return tf2::Quaternion(q1, q2, q3, q0);
 }
 
@@ -60,13 +60,14 @@ ImuFilter::ImuFilter(rclcpp::NodeOptions options)
 
   reset_calibration_srv_ = create_service<std_srvs::srv::Trigger>(
     "~/reset_calibration", std::bind(
-    &ImuFilter::reset_calibration_callback, this, _1, _2));
+      &ImuFilter::reset_calibration_callback, this, _1, _2));
 
   if (params_.do_save_bias) {
     load_bias();
     bias_save_timer_ =
-      create_wall_timer(std::chrono::seconds(params_.bias_save_period),
-        std::bind(&ImuFilter::save_bias, this));
+      create_wall_timer(
+      std::chrono::seconds(params_.bias_save_period),
+      std::bind(&ImuFilter::save_bias, this));
   }
 
   rclcpp::SubscriptionOptions sub_opts;
@@ -99,8 +100,9 @@ void ImuFilter::save_bias()
       get_logger(),
       "IMU bias file doesn't exist or couldn't be opened: %s",
       e.what());
-    RCLCPP_INFO_STREAM(get_logger(),
-        "Creating '" << file_path << "' file with current gyrometer bias.");
+    RCLCPP_INFO_STREAM(
+      get_logger(),
+      "Creating '" << file_path << "' file with current gyrometer bias.");
 
     node["gyro_bias_x"] = filter_.getAngularVelocityBiasX();
     node["gyro_bias_y"] = filter_.getAngularVelocityBiasY();
@@ -218,7 +220,7 @@ void ImuFilter::update_filter_params()
     params_.steady_state_delta_angular_velocity_threshold)
   {
     filter_.setSteadyStateDeltaAngularVelocityThreshold(
-        params_.steady_state_delta_angular_velocity_threshold);
+      params_.steady_state_delta_angular_velocity_threshold);
   }
 
   if (filter_.getSteadyStateRequiredSteadyTime() != params_.steady_state_required_steady_time) {
