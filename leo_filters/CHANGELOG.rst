@@ -2,17 +2,42 @@
 Changelog for package leo_filters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.6.0 (2025-09-13)
+2.5.0 (2025-12-29)
 ------------------
-* Backport changes from Jazzy branch to Humble (`#37 <https://github.com/LeoRover/leo_robot-ros2/issues/37>`_)
-  * Add `leo_filters` package (`#17 <https://github.com/LeoRover/leo_robot-ros2/issues/17>`_)
-  * Use target_link_libraries instead of ament_target_dependencies (`#24 <https://github.com/LeoRover/leo_robot-ros2/issues/24>`_)
-  * Don't use deprecated tf2 headers (`#25 <https://github.com/LeoRover/leo_robot-ros2/issues/25>`_)
-  * Add reset_calibration service to imu_filter (`#31 <https://github.com/LeoRover/leo_robot-ros2/issues/31>`_)
-  * Complementary filter improvements (`#34 <https://github.com/LeoRover/leo_robot-ros2/issues/34>`_)
-* Contributors: Błażej Sowa, Aleksander Szymański, Jan Hernas
 
-1.5.0 (2024-11-18)
+2.4.0 (2025-07-24)
+------------------
+* Complementary filter improvements (`#34 <https://github.com/LeoRover/leo_robot-ros2/issues/34>`_)
+* Contributors: Jan Hernas
+
+2.3.0 (2025-05-28)
+------------------
+* Add reset_calibration service to imu_filter (`#31 <https://github.com/LeoRover/leo_robot-ros2/issues/31>`_)
+* Change wheel odom topic in odom filter
+* Contributors: Błażej Sowa
+
+2.2.0 (2025-05-23)
+------------------
+* Don't use deprecated tf2 headers (`#25 <https://github.com/LeoRover/leo_robot-ros2/issues/25>`_)
+* Contributors: Błażej Sowa
+
+2.1.3 (2025-05-08)
+------------------
+* Use target_link_libraries instead of ament_target_dependencies (`#24 <https://github.com/LeoRover/leo_robot-ros2/issues/24>`_)
+* Contributors: Błażej Sowa
+
+2.1.2 (2025-05-08)
+------------------
+
+2.1.1 (2025-04-30)
+------------------
+
+2.1.0 (2025-04-30)
+------------------
+* Add `leo_filters` package (`#17 <https://github.com/LeoRover/leo_robot-ros2/issues/17>`_)
+* Contributors: Aleksander Szymański, Błażej Sowa
+
+2.0.0 (2024-11-18)
 ------------------
 
 1.4.0 (2023-11-15)
