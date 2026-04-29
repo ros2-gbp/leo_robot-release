@@ -1,0 +1,12 @@
+Source: ros-lyrical-leo-fw
+Section: misc
+Priority: optional
+Maintainer: Fictionlab <support@fictionlab.pl>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-ament-cmake-black <!nocheck>, ros-lyrical-ament-cmake-copyright <!nocheck>, ros-lyrical-ament-cmake-lint-cmake <!nocheck>, ros-lyrical-ament-cmake-mypy <!nocheck>, ros-lyrical-ament-cmake-pep257 <!nocheck>, ros-lyrical-ament-cmake-python, ros-lyrical-ament-cmake-uncrustify <!nocheck>, ros-lyrical-ament-cmake-xmllint <!nocheck>, ros-lyrical-ament-lint-auto <!nocheck>, ros-lyrical-leo-msgs, ros-lyrical-nav-msgs, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-sensor-msgs, ros-lyrical-ros-workspace
+Homepage: http://wiki.ros.org/leo_fw
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-leo-fw
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-dbus, python3-whichcraft, python3-yaml, ros-lyrical-ament-index-python, ros-lyrical-geometry-msgs, ros-lyrical-leo-msgs, ros-lyrical-nav-msgs, ros-lyrical-rcl-interfaces, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-rclpy, ros-lyrical-ros2cli, ros-lyrical-sensor-msgs, ros-lyrical-std-msgs, ros-lyrical-std-srvs, ros-lyrical-ros-workspace
+Description: Binary releases of Leo Rover firmware and related utilities
