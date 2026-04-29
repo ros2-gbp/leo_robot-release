@@ -1,0 +1,12 @@
+Source: ros-lyrical-leo-robot
+Section: misc
+Priority: optional
+Maintainer: Fictionlab <support@fictionlab.pl>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-ros-workspace
+Homepage: http://wiki.ros.org/leo_robot
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-leo-robot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-leo, ros-lyrical-leo-bringup, ros-lyrical-leo-filters, ros-lyrical-leo-fw, ros-lyrical-ros-workspace
+Description: Metapackage of software to install on Leo Rover.
