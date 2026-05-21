@@ -1,8 +1,0 @@
-/**/firmware_parameter_bridge:
-  ros__parameters:
-    mecanum_wheels: false
-
-    controller:
-      wheel_radius: 0.0625
-      wheel_separation: 0.358
-      angular_velocity_multiplier: 1.76
